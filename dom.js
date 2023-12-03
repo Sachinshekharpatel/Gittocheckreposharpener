@@ -9,4 +9,10 @@ additem.style.color='green';
 additem.innerHTML='ADD ITEMS';
 
 
-
+let list = document.querySelectorAll(".list-group-item");
+for(let i=0;i<list.length;i++){
+    if(i==2){
+        list[i].style.color="green";
+    }
+    list[i].style.fontWeight="bold";
+}

@@ -26,4 +26,19 @@ for(let i=0;i<tag.length;i++){
     }
     tag[i].style.fontWeight="Bold";
     tag[i].style.backgroundColor="lightgrey";
+}   
+//QUERYSELECTOR
+let seconditem = document.querySelector(".list-group-item:nth-child(2)");
+seconditem.style.backgroundColor="green";
+
+let third = document.querySelector(".list-group-item:nth-child(3)");
+third.style.color="transparent";
+
+//Queryselectorall 
+let odd = document.querySelectorAll(".list-group-item");
+for(let i=0;i<odd.length;i++){
+    if(i%2==1){
+       odd[i].style.backgroundColor="green"
+    }
 }
+

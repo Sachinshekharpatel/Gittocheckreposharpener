@@ -17,8 +17,17 @@ function DelFunction(e){
    }
     
 }
+// console.log(items.length)
+// editbutton functionality
+var listitems = document.querySelectorAll('.list-group-item');
 
-// additem functionality
+ for(let i=0;i<4;i++){
+    let editbtn = document.createElement('button');
+    editbtn.className ="btn btn-danger btn-sm float-right editbtn"
+    editbtn.textContent = "EDIT";
+    listitems[i].appendChild(editbtn);
+ }
+// additem functionality and 
 
 function additemtoli(e){
     e.preventDefault();
@@ -31,7 +40,14 @@ function additemtoli(e){
         let btn = document.createElement('button');
         btn.className ="btn btn-danger btn-sm float-right delete"
         btn.textContent = "X";
+        
+        let editbtn = document.createElement('button');
+        editbtn.className ="btn btn-danger btn-sm float-right editbtn"
+        editbtn.textContent = "EDIT";
+
+        // newli.appendChild(editbtn)
         newli.appendChild(btn);
+        newli.appendChild(editbtn)
         items.appendChild(newli)
     }
    

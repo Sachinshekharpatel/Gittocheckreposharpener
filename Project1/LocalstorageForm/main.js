@@ -7,6 +7,9 @@ form.addEventListener('submit',localstorage);
 
 // console.log(localStorage.length);
 
+// ===-=-=-=-=-=-= This data will append in dom as well as goes in local storage -=-=-=-=//
+
+
 
 function localstorage(e){
     e.preventDefault();
@@ -21,10 +24,20 @@ function localstorage(e){
     if(text.length>0 && email.includes('@') && email.length>1){
         localStorage.setItem(email,string) ;
         let items = document.querySelector('#items12');
-       let li = document.createElement('li');
-       li.classList = "item"
-       li.textContent = email +" "+text;
-       items.appendChild(li);
+        let btn = document.createElement('button');
+            btn.textContent = 'Delete'
+        let li = document.createElement('li');
+        li.classList = "item"
+        li.textContent = email;
+        btn.style.marginLeft='20px';
+        btn.classList = "delete";
+       
+        li.appendChild(btn);
+
+        items.appendChild(li);
+
+        btn.addEventListener('click',deletefromlocalanddom);
+        
     //    console.log(li);
     }else{
         alert('Fields are not correctly filled')
@@ -32,6 +45,15 @@ function localstorage(e){
     
 }
 
-// 
-
-
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
+   
+function deletefromlocalanddom(e){
+    e.preventDefault();
+    let items = document.querySelector('#items12');
+    // console.log(e.target.parentElement)
+       let todel = e.target.parentElement
+//    console.log(items.removeChild(todel));
+       items.removeChild(todel)
+    //    console.log(todel.firstChild.textContent);
+     localStorage.removeItem(todel.firstChild.textContent)
+}

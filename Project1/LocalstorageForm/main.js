@@ -4,7 +4,10 @@ console.log("Inside Main_JS");
 let form = document.getElementById('my-form')
 form.addEventListener('submit',localstorage);
 
-localStorage.setItem("myobj",new Array())
+
+// console.log(localStorage.length);
+
+
 function localstorage(e){
     e.preventDefault();
     // console.log("Inside locale")
@@ -16,7 +19,13 @@ function localstorage(e){
     }
     let string = JSON.stringify(obj);
     if(text.length>0 && email.includes('@') && email.length>1){
-        localStorage.setItem("myobj",string) ;
+        localStorage.setItem(email,string) ;
+        let items = document.querySelector('#items12');
+       let li = document.createElement('li');
+       li.classList = "item"
+       li.textContent = email +" "+text;
+       items.appendChild(li);
+    //    console.log(li);
     }else{
         alert('Fields are not correctly filled')
     }

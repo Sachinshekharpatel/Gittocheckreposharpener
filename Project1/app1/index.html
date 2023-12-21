@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- <h1>Hello, world!</h1> -->
+    <div style="display: flex;">
+        <label>Choose Expense amount:</label>
+         <input id="expense" type="number">
+        <label >Choose Discription:</label>
+        <input  id="discription" type="text">
+        <p>Choose a Category:</p>
+        <select id="categorySelect">
+          <option value="fuel">Fuel</option> 
+          <option value="Electricity">Electricity</option> 
+          
+          <option value="movie">Movie</option>
+          <option value="shopping">Shopping </option>
+        </select>
+        <button style="margin-left: 20px;" id="btn">Add Expense</button>
+    </div>
+    <!-- <div id="formcontainer"> -->
+        <ul id="parentul">
+           <!-- <ul></ul> -->
+        </ul>
+    </div>
+     
+</body>
+<script src="index.js" ></script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div>
+        <label>Selling Price:<input id="sellingprice" type="number"></label>
+        <label>Product Name :<input id="productname" type="text"></label>
+        <select id="categoryselect"> 
+            <option value="electronics">Electronics</option> 
+            <option value="skincare">Skincare</option>
+            <option value="food">Food</option>
+        </select>
+        
+        <button id="addproduct" onclick="addproduct()">AddProduct</button>
+    </div>
+    <h1>Products</h1>
+    <div id="electronicdiv">
+        <h1>Electronic Items</h1>
+        <ul id="electronicul">
+            <!-- <li></li> -->
+        </ul>
+    </div>
+    <div id="fooditemdiv">
+        <h1>Fooditem Items</h1>
+        <ul id="fooditemul"></ul>
+    </div>
+    <div id="skincarediv">
+        <h1>Skincare Items</h1>
+        <ul id="skincareul"></ul>
+    </div>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.3/axios.min.js" integrity="sha512-JWQFV6OCC2o2x8x46YrEeFEQtzoNV++r9im8O8stv91YwHNykzIS2TbvAlFdeH0GVlpnyd79W0ZGmffcRi++Bw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="index.js"></script>
